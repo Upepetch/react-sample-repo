@@ -1,10 +1,11 @@
 import React from "react";
 
 // simple list component
-function SimpleList({items}) {
+function SimpleList ({items = [] }) {
     return(
         <ul>
-           {items.map((item, i) => ( <li key={i}>{item}</li>
+           {items.map((item, i) => ( 
+            <li key={i}>{item}</li>
         
           ))}
         </ul>

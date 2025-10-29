@@ -1,30 +1,57 @@
-import React from "react";
+import React, { useState } from "react";
 
-// import SimpleList from "./SimpleList"; // Bonus
+// Set multi-level switching rendering
 
+import SimpleList from "./SimpleList"; // Bonus
+import StyledButton from "./StyledButton";
+import CreateJob from "./CreateJob";
 import VariableDisplay from "./VariableDisplay";
+import JobCounter from "./JobCounter";
 
 
-function App() {
-  //const object1 = {empID: 'Emp123', emdept: 'IT'};
+const App = () => { 
 
-  // const arrayVar = ["apple", "banana", "mango", "cherry"]; // Bonus
+  const [view, setView] = useState('job');
+  const [showView, setShowView] = useState(true);
+  const [showButtons, setShowButtons] = useState(true);
 
+  const arrayVar = ["apple", "banana", "mango", "cherry"];
 
   return (
     <div>
-       {/* Employee department: {object1.emdept} */}
+        <button style={{color: 'red', textAlign: 'center'}} onClick={() => setShowView(prev => !prev)}>
+            {showView ? 'Hide View' : 'Show View'}
+         </button>
 
-       <VariableDisplay/>
+           <button style={{color: 'red', textAlign: 'center'}}  onClick={() => setShowButtons(prev => !prev)}>
+             {showButtons ? 'Hide Buttons' : 'Show Buttons'}
+         </button>
+       
+       {showButtons && (
+          <>
+            <button onClick={() => setView('job')}>CreateJob</button>
+            <button onClick={() => setView('list')}>SimpleList</button>
+            <button onClick={() => setView('button')}>StyledButton</button>
+            <button onClick={() => setView('variable')}>VariableDisplay</button>
+          </>
+       )}
 
-       {/* <SimpleList items={arrayVar}/> //   Bonus     */} 
+       {showView && (
+          <>
+            {view === 'job' && <CreateJob />}
+            {view === 'list' && <SimpleList items={arrayVar} />}
+            {view === 'button' && <StyledButton />}
+            {view === 'variable' && <VariableDisplay />}
+          </>
+        )}
+        <JobCounter />
     </div>
-
-
   )
-
 }
 
+  //const object1 = {empID: 'Emp123', emdept: 'IT'};
+
+  // const arrayVar = ["apple", "banana", "mango", "cherry"]; // Bonus
 
 
 export default App;

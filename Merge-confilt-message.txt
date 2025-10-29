@@ -1,0 +1,3 @@
+Merge remote-tracking branch 'origin/main' into main
+
+Pulled in upstream changes from GitHub to sync histories and resolve divergence. This ensures local commits are integrated with the remote README and initial setup.
