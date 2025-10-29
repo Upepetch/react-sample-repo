@@ -75,5 +75,34 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 This component demonstrates React's `useState` and event handling. Click the "Add Job" button to increment the job count.
 
 Located in: `src/JobCounter.js`
+## AdvancedJobCounter Component
+The AdvancedJobCounter is an interactive React component designed to demonstrate key frontend concepts including state management, conditional rendering, and event handling.
+
+🔧 Features:
+Tracks the number of jobs using React’s useState
+
+Prevents job count from dropping below zero
+
+Displays dynamic messages based on job count thresholds
+
+Allows toggling between Production and UAT environments
+
+Includes buttons to add, remove, and reset job count
+
+📍 Location:
+src/AdvancedJobCounter.js
+
+💡 Usage:
+This component is ideal for practical exercises focused on:
+
+Understanding stateful logic
+
+Implementing conditional UI feedback
+
+Practicing event-driven updates
+
+Exploring environment toggling in React
+
+
 
 
