@@ -7,13 +7,14 @@ import StyledButton from "./StyledButton";
 import CreateJob from "./CreateJob";
 import VariableDisplay from "./VariableDisplay";
 import JobCounter from "./JobCounter";
+import AdvancedJobCounter from "./AdvancedJobCounter";
 
 
 const App = () => { 
 
   const [view, setView] = useState('job');
-  const [showView, setShowView] = useState(true);
-  const [showButtons, setShowButtons] = useState(true);
+  const [showView, setShowView] = useState(false);
+  const [showButtons, setShowButtons] = useState(false);
 
   const arrayVar = ["apple", "banana", "mango", "cherry"];
 
@@ -45,6 +46,7 @@ const App = () => {
           </>
         )}
         <JobCounter />
+        <AdvancedJobCounter />
     </div>
   )
 }

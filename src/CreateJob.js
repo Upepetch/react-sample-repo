@@ -1,15 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const CreateJob = () => {
       const jobCount = 13;
-      let jobCounter = 0;
-      
+      let [jobCounter, setJobCounter] = useState(0);
+
       function handleClickEvent() {
-          
-          jobCounter++
+          setJobCounter(jobCounter + 1);
           console.log(`Run job: ${jobCounter}`);
-         
         }
+
+      const handleSubtractEvent = () => {
+          setJobCounter(jobCounter - 1);
+        }
+
+      const handleResetEvent = () => {
+        setJobCounter(0)
+      }
     
         const countJob = () => {
           if (jobCount === 0) {
@@ -24,8 +30,12 @@ const CreateJob = () => {
   return ( 
       <div>
         <h1>Jobs: {countJob()}</h1>
-        <h3>Running job count: {jobCounter}</h3>
+        <h3>Bots running in production: {jobCounter}</h3>
         <button onClick={handleClickEvent} className='dfsdfs' value = 'Create job'>Create a job</button> 
+        <button onClick={handleSubtractEvent} className='dfsdfs' value = 'Create job'>Remove a job</button> 
+        <button onClick={handleResetEvent} className='dfsdfs' value = 'Create job'>Reset</button> 
+        <h3>Bots running in User Acceptance Testing (UAT): {jobCounter -5}</h3>
+
       </div>
   );
 }

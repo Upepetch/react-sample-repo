@@ -10,6 +10,7 @@ const JobCounter = () => {
                    // console.log('New job count:'); 
 
     setJobCount (prev => prev + 1); // Increment in React JS
+    // setJobCount(jobCount + 1); // This works fine in simple cases, but it can lead to bugs if:
    
    }
 
