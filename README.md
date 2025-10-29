@@ -68,3 +68,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+## JobCounter Component
+
+This component demonstrates React's `useState` and event handling. Click the "Add Job" button to increment the job count.
+
+Located in: `src/JobCounter.js`
+
+
