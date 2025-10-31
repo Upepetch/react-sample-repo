@@ -78,7 +78,7 @@ Located in: `src/JobCounter.js`
 ## AdvancedJobCounter Component
 The AdvancedJobCounter is an interactive React component designed to demonstrate key frontend concepts including state management, conditional rendering, and event handling.
 
-🔧 Features:
+ Features:
 Tracks the number of jobs using React’s useState
 
 Prevents job count from dropping below zero
@@ -89,10 +89,10 @@ Allows toggling between Production and UAT environments
 
 Includes buttons to add, remove, and reset job count
 
-📍 Location:
+Location:
 src/AdvancedJobCounter.js
 
-💡 Usage:
+Usage:
 This component is ideal for practical exercises focused on:
 
 Understanding stateful logic
@@ -105,10 +105,14 @@ Exploring environment toggling in React
 
 
 
-🧾 DynamicForm Component
+## DynamicForm Component
+
+
 DynamicForm.js is a React component included in this repo that demonstrates interactive form handling with validation and dynamic rendering.
 
-✨ Features
+ Features:
+
+
 Live input tracking with character count
 
 Minimum length validation (default: 3 characters)
@@ -124,7 +128,10 @@ Remove button deletes the last submitted item
 Dynamic list rendering of submitted items
 
 
-📦 Usage
+Usage:
+
+
+
 To use the component:
 
 js
@@ -138,7 +145,9 @@ function App() {
   );
 }
 
-🧠 Validation Logic
+🧠 Validation Logic:
+
+
 The form checks that the input has at least 3 non-whitespace characters. If invalid, it shows an error message and disables submission.
 
 js
