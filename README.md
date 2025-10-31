@@ -105,4 +105,45 @@ Exploring environment toggling in React
 
 
 
+🧾 DynamicForm Component
+DynamicForm.js is a React component included in this repo that demonstrates interactive form handling with validation and dynamic rendering.
+
+✨ Features
+Live input tracking with character count
+
+Minimum length validation (default: 3 characters)
+
+Error message display for invalid input
+
+Submit button adds valid input to a list
+
+Reset button clears the input field
+
+Remove button deletes the last submitted item
+
+Dynamic list rendering of submitted items
+
+📦 Usage
+To use the component:
+
+js
+import DynamicForm from './DynamicForm';
+
+function App() {
+  return (
+    <div>
+      <DynamicForm />
+    </div>
+  );
+}
+🧠 Validation Logic
+The form checks that the input has at least 3 non-whitespace characters. If invalid, it shows an error message and disables submission.
+
+js
+if (value.trim().length < MIN_LENGTH) {
+  setError(`Input must be at least ${MIN_LENGTH} characters.`);
+} else {
+  setError('');
+}
+
 
