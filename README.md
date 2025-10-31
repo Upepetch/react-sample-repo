@@ -110,6 +110,7 @@ Exploring environment toggling in React
 
 DynamicForm.js is a React component included in this repo that demonstrates interactive form handling with validation and dynamic rendering.
 
+
  Features:
 
 
@@ -145,7 +146,8 @@ function App() {
   );
 }
 
-🧠 Validation Logic:
+ 
+ Validation Logic:
 
 
 The form checks that the input has at least 3 non-whitespace characters. If invalid, it shows an error message and disables submission.
