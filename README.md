@@ -123,6 +123,7 @@ Remove button deletes the last submitted item
 
 Dynamic list rendering of submitted items
 
+
 📦 Usage
 To use the component:
 
@@ -136,6 +137,7 @@ function App() {
     </div>
   );
 }
+
 🧠 Validation Logic
 The form checks that the input has at least 3 non-whitespace characters. If invalid, it shows an error message and disables submission.
 
