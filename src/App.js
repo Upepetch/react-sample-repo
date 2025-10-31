@@ -8,6 +8,7 @@ import CreateJob from "./CreateJob";
 import VariableDisplay from "./VariableDisplay";
 import JobCounter from "./JobCounter";
 import AdvancedJobCounter from "./AdvancedJobCounter";
+import DynamicForm from "./DynamicForm";
 
 
 const App = () => { 
@@ -45,8 +46,9 @@ const App = () => {
             {view === 'variable' && <VariableDisplay />}
           </>
         )}
-        <JobCounter />
-        <AdvancedJobCounter />
+        {/* <JobCounter /> */}
+        {/* <AdvancedJobCounter /> */}
+        <DynamicForm />
     </div>
   )
 }

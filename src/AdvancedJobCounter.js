@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
 const AdvancedJobCounter = () => {
         const [jobCount, setJobCount] = useState(0);
