@@ -162,10 +162,11 @@ if (value.trim().length < MIN_LENGTH) {
 
 
 
-🧠 Bot List Manager
+## Bot List Manager
+
 A simple React component for managing a list of bots with status tracking, task descriptions, and interactive controls.
 
-🚀 Features
+Features
 Trigger Job: Updates a bot’s status based on its ID when the "Trigger Job" button is clicked.
 
 Add Bot Form: Users can add new bots by entering a name and task. New bots start with a "Pending" status.
@@ -174,7 +175,7 @@ Status Filter: Dropdown filter allows users to view bots by status (Running, Com
 
 Delete Bot: Removes a bot from the list with a single click.
 
-🧩 Component Overview
+Component Overview
 useState manages:
 
 bots: the list of bot objects
@@ -191,7 +192,7 @@ handleDeleteBot(id): removes a bot from the list
 
 filteredBots: dynamically filters bots based on selected status
 
-🎨 Styling
+Styling
 Each bot is styled with a colored label based on its status:
 
 Running → green
@@ -202,7 +203,7 @@ Pending → blue
 
 Stopped → red
 
-📦 Usage
+Usage
 Import and use the component in your app:
 
 js
