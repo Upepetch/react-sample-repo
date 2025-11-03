@@ -9,6 +9,7 @@ import VariableDisplay from "./VariableDisplay";
 import JobCounter from "./JobCounter";
 import AdvancedJobCounter from "./AdvancedJobCounter";
 import DynamicForm from "./DynamicForm";
+import BotListManager from "./BotListManager";
 
 
 const App = () => { 
@@ -48,7 +49,8 @@ const App = () => {
         )}
         {/* <JobCounter /> */}
         {/* <AdvancedJobCounter /> */}
-        <DynamicForm />
+        {/* <DynamicForm /> */}
+        <BotListManager />
     </div>
   )
 }
