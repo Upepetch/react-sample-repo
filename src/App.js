@@ -10,6 +10,7 @@ import JobCounter from "./JobCounter";
 import AdvancedJobCounter from "./AdvancedJobCounter";
 import DynamicForm from "./DynamicForm";
 import BotListManager from "./BotListManager";
+import DynamicBotManager from "./DynamicBotManager";
 
 
 const App = () => { 
@@ -50,7 +51,8 @@ const App = () => {
         {/* <JobCounter /> */}
         {/* <AdvancedJobCounter /> */}
         {/* <DynamicForm /> */}
-        <BotListManager />
+        {/* <BotListManager /> */}
+        <DynamicBotManager />
     </div>
   )
 }
