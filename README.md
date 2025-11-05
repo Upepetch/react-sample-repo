@@ -218,6 +218,27 @@ function App() {
 }
 
 
+## Dynamic Bot Manager
+
+A simple React component for managing a dynamic list of bots. Users can add new bots with a name and status, view the list, and delete individual bots. Each bot is assigned a unique UUID automatically.
+
+## Features
+
+- Add new bots with `name` and `status`
+- Automatically generate a unique `id` using `crypto.randomUUID()`
+- Form validation to ensure all fields are filled before adding
+- Disable "Add Bot" button until inputs are valid
+- Delete bots from the list
+- Inline validation message for user feedback
+- Status selection via dropdown
+
+## Installation
+
+Clone the repo or copy the component into your React project.
+
+```bash
+npm install
+npm start
 
 
 
