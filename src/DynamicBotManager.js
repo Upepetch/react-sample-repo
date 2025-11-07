@@ -53,7 +53,7 @@ const deleteBot = (id) => {
         </select>
         <ul>
           {
-          botList.map(({id, name, status}) => <li key={id}>{id} - {name} - {status} 
+           botList.map(({id, name, status}) => <li key={id}>{id} - {name} - {status} 
           <button onClick={() => deleteBot(id)} style={{margin: '2px'}}>Delete Bot</button></li>) // function reference/arrow function to prevent automatic function call
           }
         </ul>

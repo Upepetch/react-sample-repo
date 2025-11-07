@@ -1,0 +1,71 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* App styles */
+.app {
+    font-family: sans-serif;
+    padding: 20px;
+    min-height: 100vh;
+    /* display: flex; */
+    flex-direction: column;
+}
+
+button {
+    margin: 10px 0;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+ 
+/* Header styles */
+.header {
+  background-color: #222;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 10px;
+}
+
+nav a {
+  color: #a8bfff;
+  text-decoration: none;
+}
+
+
+/* Footer styles */
+footer {
+  margin-top: auto;
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Job List styles */
+
+.job-list {
+    padding: 20px;
+}
+
+/* Job item styles */
+
+.job-item {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+}
+

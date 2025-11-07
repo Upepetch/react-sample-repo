@@ -1,6 +1,4 @@
-import React, { useState } from "react";
-
-// Set multi-level switching rendering
+import { useState } from "react";
 
 import SimpleList from "./SimpleList"; // Bonus
 import StyledButton from "./StyledButton";
@@ -11,59 +9,45 @@ import AdvancedJobCounter from "./AdvancedJobCounter";
 import DynamicForm from "./DynamicForm";
 import BotListManager from "./BotListManager";
 import DynamicBotManager from "./DynamicBotManager";
+import { Header } from "./Component/Header";
+import { Footer } from "./Component/Footer";
+import { JobList } from "./Component/JobList";
+import './App.css';
 
 
 const App = () => { 
+  const [show, setShow] = useState(true);
 
-  const [view, setView] = useState('job');
-  const [showView, setShowView] = useState(false);
-  const [showButtons, setShowButtons] = useState(false);
 
-  const arrayVar = ["apple", "banana", "mango", "cherry"];
-
+  const jobs = [
+      {id: crypto.randomUUID(), name: 'Email Extractor', status: 'running'}, 
+      {id: crypto.randomUUID(), name: 'Data Analyzer', status: 'completed'}, 
+      {id: crypto.randomUUID(), name: 'Data Collector', status: 'pending'},
+      {id: crypto.randomUUID(), name: 'Report Generator', status: 'failed'}
+  ];
+  
   return (
-    <div>
-        <button style={{color: 'red', textAlign: 'center'}} onClick={() => setShowView(prev => !prev)}>
-            {showView ? 'Hide View' : 'Show View'}
-         </button>
+    <div className="app">
+      <Header />
 
-           <button style={{color: 'red', textAlign: 'center'}}  onClick={() => setShowButtons(prev => !prev)}>
-             {showButtons ? 'Hide Buttons' : 'Show Buttons'}
-         </button>
-       
-       {showButtons && (
-          <>
-            <button onClick={() => setView('job')}>CreateJob</button>
-            <button onClick={() => setView('list')}>SimpleList</button>
-            <button onClick={() => setView('button')}>StyledButton</button>
-            <button onClick={() => setView('variable')}>VariableDisplay</button>
-          </>
-       )}
-
-       {showView && (
-          <>
-            {view === 'job' && <CreateJob />}
-            {view === 'list' && <SimpleList items={arrayVar} />}
-            {view === 'button' && <StyledButton />}
-            {view === 'variable' && <VariableDisplay />}
-          </>
-        )}
-        {/* <JobCounter /> */}
-        {/* <AdvancedJobCounter /> */}
-        {/* <DynamicForm /> */}
-        {/* <BotListManager /> */}
+      <section className="counters">
+        <JobCounter /> 
+        <AdvancedJobCounter />
+      </section>
+      <section className="forms">
+        <DynamicForm />
+        <BotListManager />
         <DynamicBotManager />
+      </section>
+        
+        <button onClick={() => setShow(!show)}>
+        {show ? 'Hide Job List' : 'Show Job List'}
+        </button>
+        {show && <JobList jobs={jobs}/>}
+        
+        <Footer />
     </div>
-  )
-}
-
-  //const object1 = {empID: 'Emp123', emdept: 'IT'};
-
-  // const arrayVar = ["apple", "banana", "mango", "cherry"]; // Bonus
-
+  );
+};
 
 export default App;
-
-
-// ps: when returning you use curly brackets ({}) with your defined variable (you always return something)
-
