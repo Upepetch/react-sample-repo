@@ -86,7 +86,7 @@ const BotListManager = () => {
       </form>
 
 {/* Bonus: Implement a filter functionality to show only bots with a specific status. */}
-      <select name="" id="" onChange={e => setFilterStatus(e.target.value)}>
+      <select name="" id="" onChange={(e) => setFilterStatus(e.target.value)}>
         <option value="">All</option>
         <option value="Running">Running</option>
         <option value="Completed">Completed</option>

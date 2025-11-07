@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 
-export const JobItem = ({job}) => {
+export const JobItem = ({job, onDelete}) => {
   const {id, name, status} = job;
 
   const styleAtt = {
@@ -11,6 +11,8 @@ export const JobItem = ({job}) => {
            status === 'failed' ? 'red':
            'default'
   };
+
+ 
   return (
     <li className='job-item' style={styleAtt}>
       <span>{id}</span> - <span>{name}</span> - <span className='status'>{status}</span>
@@ -18,6 +20,8 @@ export const JobItem = ({job}) => {
       {status === 'completed' && <p>Job completed successfully.</p>}
       {status === 'pending' && <p>Job is awaiting assignment.</p>}
       {status === 'failed' && <p>Job failed. Please check logs</p>}
+
+      <button onClick={() => onDelete(id)}>Delete job</button>
     </li>
   );
 };
