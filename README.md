@@ -236,9 +236,47 @@ A simple React component for managing a dynamic list of bots. Users can add new 
 
 Clone the repo or copy the component into your React project.
 
-```bash
-npm install
-npm start
+## ```bash
+   npm install
+   npm start
+
+
+
+## Job Board Application
+
+Features
+Add a bullet list like:
+
+Add and remove jobs with custom name and status
+
+Search jobs by name in real time
+
+Job counter with dynamic status messages and environment toggle
+
+Reset job count safely (never drops below zero)
+
+Usage Instructions
+Include:
+
+How to run the app (npm start)
+
+How to add a job (fill form → click "Add Job")
+
+How to search (type in search bar)
+
+How to toggle environment
+
+Component Breakdown
+
+Components
+
+App.js	Manages global state and renders job list + form
+
+JobList.js	Displays filtered jobs
+
+JobItem.js	Renders individual job with delete button
+
+AdvancedJobCounter.js	Shows job count and environment toggle
 
 
 
