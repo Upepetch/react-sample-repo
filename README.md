@@ -279,5 +279,42 @@ JobItem.js	Renders individual job with delete button
 AdvancedJobCounter.js	Shows job count and environment toggle
 
 
+## Features Implemented
+
+ - Add new jobs with name and status
+ - Delete existing jobs
+
+ - Display job list with dynamic styling based on status
+
+ - Filter jobs by search term 
+
+ - Defensive prop handling to prevent crashes
+
+ - Modular components: 
+      Header, 
+      Footer, 
+      CreateJob, 
+      JobList, 
+      JobItem
+
+## Feature in Progress: Edit Existing Jobs
+
+The app is structured to support editing jobs, but the feature is not yet complete. Here's what’s been explored:
+
+ - State placeholders for editingJobId, editedName, and editedStatus
+
+ - Conditional rendering logic for switching between view and edit mode
+
+ - Plan to modularize editing into a reusable <JobItem /> component
+
+## Next steps when ready:
+
+Finalize handleEditJob() and handleSaveEdit() logic in App.js
+
+Move conditional rendering into JobItem for cleaner JSX
+
+Add validation and cancel/reset behavior
+
+
 
 
