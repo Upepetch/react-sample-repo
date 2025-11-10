@@ -20,7 +20,8 @@ html, body {
 
 button {
     margin: 10px 0;
-    padding: 8px 12px;
+    padding: 1px 8px;
+    border-radius: 99px;
     cursor: pointer;
 }
 
@@ -67,5 +68,89 @@ footer {
     border: 1px solid #ccc;
     border-radius: 6px;
     background-color: #f9f9f9;
+}
+
+/* Status board styles */
+
+.ticket-div {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.ticket-info.completed {
+  background-color: #d4edda;
+  border-left: 5px solid #28a745;
+  text-align: center;
+}
+
+
+.ticket-info.in-progress {
+  background-color: #fff3cd;
+  border-left: 5px solid #ffc107;  
+  text-align: center;
+}
+
+.ticket-info.failed {
+  background-color: #f8d7da;
+  border-left: 5px solid #dc3545;  
+  text-align: center;
+}
+
+/* ticket count styles */
+.ticket-count {
+  font-weight: bold; 
+  margin-left: 15px;
+  color: #555;
+}
+
+/* Ticket info Styles */
+
+.ticket-info {
+  flex: 1 1 300px; /*minimum width per block */
+  max-width: 400px;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: background 0.3s ease;
+}
+
+.ticket-info:hover {
+  background-color: #f0f0f0;
+}
+
+.ticket-details {
+  margin-top: 0.5rem;
+  padding-left: 1rem;
+}
+
+@media (max-width: 768px) {
+  .ticket-info {
+    flex: 1 1 100%;
+  }
+}
+
+
+.ticket-item {
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  border-radius: 6px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+
+/* Status-based colors */
+.ticket-item.completed {
+  background-color: #d4edda;
+}
+
+.ticket-item.in-progress {
+  background-color: #fff3cd;
+}
+
+.ticket-item.failed {
+  background-color: #f8d7da;
 }
 

@@ -13,6 +13,7 @@ import { Header } from "./Component/Header";
 import { Footer } from "./Component/Footer";
 import { JobList } from "./Component/JobList";
 import './App.css';
+import StatusBoard from "./Component/StatusBoard";
 
 
 const App = () => { 
@@ -101,6 +102,7 @@ const filteredJobs = jobs.filter(job =>
           {show && <JobList jobs={filteredJobs} onDelete={handleDeleteJob}/>}
       </section>
         
+        <StatusBoard />
         <Footer />
     </div>
   );
