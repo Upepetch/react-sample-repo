@@ -53,7 +53,8 @@ const JobForm = () => {
             onChange={(e) => setCompany(e.target.value)}
           />
           </label>
-          <br /><br />
+          {error && <p style={{color: 'red'}}>{error}</p>}
+          <br />
           <div className='form-details'>
             <div className='bottom-line'>
             </div>
@@ -69,11 +70,10 @@ const JobForm = () => {
               <option value="stopped">Stopped</option>
             </select><br />
             
-             {error && <p style={{color: 'red'}}>{error}</p>}
             <button type='submit' className='submit-data'>Add job</button>
 
             {submittedJob && (
-              <div  style={{ marginTop: '1rem', color: 'green' }}>
+              <div  style={{ marginTop: '2rem', marginBottom: '1rem', color: 'green' }}>
                 {/* state to show in browser */}
                 <strong>Submitted Job: </strong>{submittedJob.title} at {submittedJob.company}
               </div>
