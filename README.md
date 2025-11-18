@@ -1,3 +1,8 @@
+# Job Management Dashboard
+
+ # Project Overview  
+This React project is a modular job management application designed to showcase reusable components, clean UI logic, and scalable architecture. It includes a dynamic form, styled layout, and semantic rendering using modern React and CSS practices.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
